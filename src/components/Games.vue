@@ -3,18 +3,29 @@
     <div>
         <ul id="nav-mobile" class="sidenav sidenav-fixed" style="overflow: auto;">
             <li class="logo center"><img src="../assets/circled-notch.png" alt="" style="height: 150px;" /></li>
-            <!-- <li class="active"><router-link class="" to="/charactercreate">Characters</router-link></li> -->
-            <router-link class="active" tag="li" to="/characterdashboard"><a>Characters</a></router-link>
-            <router-link tag="li" to="/games"><a>Games</a></router-link>
+            <router-link tag="li" to="/characterdashboard"><a>Characters</a></router-link>
+            <router-link class="active" tag="li" to="/games"><a>Games</a></router-link>
         </ul>
         <main style="padding-left: 300px;">
             <div class="container"></div>
             <nav>
                 <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">Character Creator</a>
+                    <a href="#" class="brand-logo">Games</a>
                     <a href="#" data-activates="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
+
+            <div class="row">
+                <div class="col s4 m4">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Puffin Forest</span>
+                            <p>Owner: Dre</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <button v-on:click="logout">Logout</button>
             <!-- <div class="fixed-action-btn">
                 <a class="btn-floating btn-large red"><i class="material-icons">add</i></a>
@@ -33,7 +44,7 @@
     import firebase from 'firebase'
 
     export default {
-        name: 'charactercreate',
+        name: 'games',
         data () {
             return {
                 name: '',

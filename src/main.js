@@ -32,7 +32,7 @@ new Vue({
       firebase.auth().onAuthStateChanged((user) => {
           if (user) {
               // console.log(user);
-              this.$router.push('/charactercreate');
+              this.$router.push('/characterdashboard');
           }
           else {
               this.$router.push('/auth')

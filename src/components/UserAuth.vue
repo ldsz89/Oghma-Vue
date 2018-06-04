@@ -32,7 +32,7 @@
             signUp () {
                 firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
                     (user) => {
-                        this.$router.replace('charactercreate')
+                        this.$router.replace('characterdashboard')
                     },
                     (err) => {
                         alert('Oops. ' + err.message)
@@ -42,7 +42,7 @@
             signIn () {
                 firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
                     (user) => {
-                        this.$router.replace('charactercreate')
+                        this.$router.replace('characterdashboard')
                     },
                     (err) => {
                         alert('Oops. ' + err.message)
@@ -52,7 +52,7 @@
         },
         mounted() {
             var uiConfig = {
-                signInSuccessUrl: '/charactercreate',
+                signInSuccessUrl: '/characterdashboard',
                 signInOptions: [
                     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
                     firebase.auth.EmailAuthProvider.PROVIDER_ID,
