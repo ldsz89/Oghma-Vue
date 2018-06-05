@@ -33,11 +33,33 @@
             </div>
 
             <button v-on:click="logout">Logout</button>
-            <!-- <div class="fixed-action-btn">
-                <a class="btn-floating btn-large red"><i class="material-icons">add</i></a>
-            </div> -->
-            <router-link tag="div" class="fixed-action-btn" to=""><a class="btn-floating btn-large red"><i class="material-icons">add</i></a></router-link>
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large red modal-trigger" href="#form-selection"><i class="material-icons">add</i></a>
+            </div>
+            <!-- <router-link tag="div" class="fixed-action-btn" to=""><a class="btn-floating btn-large red"><i class="material-icons">add</i></a></router-link> -->
         </main>
+
+        <div class="modal" id="form-selection">
+            <div class="modal-content">
+                <h4>Choose</h4>
+                <div class="row">
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content center">
+                                <h4>Custom Character</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content center">
+                                <h4>Guided Character</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -45,6 +67,7 @@
     $(document).ready(function() {
         $('.sidenav').sidenav();
         $('.fixed-action-btn').floatingActionButton();
+        $('.modal').modal();
     })
 
     import firebase from 'firebase'
